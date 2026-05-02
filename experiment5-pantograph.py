@@ -28,8 +28,8 @@ with Server() as server:
     print(state.goals[0])
 
     # Provide witness k + j: n + m = 2 * (k + j)
-    state = server.goal_tactic(state, tactic="exact ⟨k + j, by rw [hk, hj]; ring⟩")
-    print("\n--- After 'exact ⟨k + j, by rw [hk, hj]; ring⟩' ---")
+    state = server.goal_tactic(state, tactic="exact ⟨k + j, by rw [hk, hj]; omega⟩")
+    print("\n--- After 'exact ⟨k + j, by rw [hk, hj]; omega⟩' ---")
 
     if not state.goals:
         print("--- Proof Finished Successfully! ---")
