@@ -1,11 +1,11 @@
 from lean_dojo import Dojo, LeanGitRepo, ProofFinished, TacticState, Theorem
 
 repo = LeanGitRepo(
-    "https://github.com/tsigemariamzewdu/lean4-example",  # replace with your fork
-    "7fba2a9b251a0af89fd999150bcd37d49ce616d9",                                 # replace with your commit hash
+    "https://github.com/tsigemariamzewdu/lean4-example",  
+    "7fba2a9b251a0af89fd999150bcd37d49ce616d9",                                
 )
 
-theorem = Theorem(repo, "Lean4Example.lean", "bar")
+theorem = Theorem(repo, "Lean4Example.lean", "bar")  # repo, theorem file, theorem name
 
 with Dojo(theorem) as (dojo, state0):
     print("Initial goal:")
